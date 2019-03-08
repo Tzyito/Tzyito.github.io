@@ -47,7 +47,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/img/头像.jpg" class="js-avatar show">
+			<img src="./img/索隆.jpg" class="js-avatar show">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Tzyito</a></h1>
@@ -101,7 +101,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/img/头像.jpg" class="js-avatar">
+				<img src="./img/索隆.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Tzyito</h1>
@@ -156,19 +156,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-hexo的安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/04/hello-world-1/">利用hexo和Github搭建一个简单的博客</a>
+      <a class="article-title" href="/2019/03/04/hexo的安装/">利用hexo和Github搭建一个简单的博客</a>
     </h1>
   
 
         
-        <a href="/2019/03/04/hello-world-1/" class="archive-article-date">
+        <a href="/2019/03/04/hexo的安装/" class="archive-article-date">
   	<time datetime="2019-03-04T03:37:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-04</time>
 </a>
         
@@ -176,21 +176,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="First-Step"><a href="#First-Step" class="headerlink" title="First Step"></a>First Step</h1><p>你需要安装node.js和Git，并新建一个folder用于存放你的博客然后<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo --save</span><br></pre></td></tr></table></figure></p>
-<h2 id="Second-Step"><a href="#Second-Step" class="headerlink" title="Second Step"></a>Second Step</h2><p>创建好上一步后，你可以更换主题，如何更换呢？</p>
-<h2 id="下面是测试字数"><a href="#下面是测试字数" class="headerlink" title="下面是测试字数"></a>下面是测试字数</h2><ul>
-<li>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
-<li>凸凸凸凸凸凸凸凸凸凸凸凸</li>
-<li>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
-<li>凸凸凸凸凸凸凸凸凸凸凸凸</li>
-<li>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
-<li>凸凸凸凸凸凸凸凸凸凸凸凸</li>
-<li>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
-<li>凸凸凸凸凸凸凸凸凸凸凸凸<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;可以手动分割</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+        <p><div style="width:150px height:300px"><br><img src="../img/头像1.jpg" alt="头像"><br></div></p>
+<p><font color="#7FFFD4"><br>最近心血来潮想自己搭建一个博客，来放平时的笔记和心得。于是在上网看了多种博客搭建的技术，决定选用hexo+GitHub(+购买阿里云域名)来搭建一个简洁、加载迅速的静态博客.这里提供一些相关软件的安装和自己在搭建的过程中遇到的问题，如果存在错误或者确定，欢迎给我留言！!<br></font></p>
+<h1 id="一、First-Step"><a href="#一、First-Step" class="headerlink" title="一、First Step"></a>一、First Step</h1><hr>
+<p>首先你需要安装Git、node.js、hexo.</p>
+<h2 id="1-Git的安装"><a href="#1-Git的安装" class="headerlink" title="1. Git的安装"></a>1. Git的安装</h2><p>首先你需要安装<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></p>
+<blockquote>
+<p>注：这里需要用到Git，所以需要读者了解一些Git常用命令，比如如何推送分支、clone分支、拉去分支……(当然后期会出一些Git的实用教程、这里就不详细讲解Git)</p>
+</blockquote>
+<h2 id="2-node-js"><a href="#2-node-js" class="headerlink" title="2. node.js"></a>2. node.js</h2><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a>下载地址，然后一顿操作后打开<code>cmd</code>输入<code>node -v</code>显示版本号说明安装成功，<code>npm</code>是node.js自带的包管理工具,输入<code>npm -v</code>显示版本号说明安装成功，我们后面就可用npm来安装博客需要的软件</p>
+<h1 id="二、Second-Step"><a href="#二、Second-Step" class="headerlink" title="二、Second Step"></a>二、Second Step</h1><p>创建好上一步后，你可以更换主题，如何更换呢？</p>
+<h2 id="下面是测试字数"><a href="#下面是测试字数" class="headerlink" title="下面是测试字数"></a>下面是测试字数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;可以手动分割</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2019/03/04/hello-world-1/#more">more >></a>
+          <a class="article-more-a" href="/2019/03/04/hexo的安装/#more">more >></a>
         
       
 
@@ -216,7 +214,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
+        			<a href="/categories/实用技术//" class="article-tag-list-link color5">实用技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/实用技术/个人博客//" class="article-tag-list-link color5">个人博客</a>
         		</li>
       		
 		</ul>
@@ -225,7 +227,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/04/hello-world-1/">更多 >></a>
+          <a class="article-more-a" href="/2019/03/04/hexo的安装/">更多 >></a>
         </p>
       
 
@@ -309,7 +311,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
+        			<a href="/categories/教程//" class="article-tag-list-link color3">教程</a>
         		</li>
       		
 		</ul>
@@ -484,7 +486,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">人间似火&lt;br&gt;诗和远方属于那些勇于奔向火焰的人&lt;br&gt;浴火重生&lt;br&gt;联系(聊骚)请加qq568063539 QAQ</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">QQ：568063539&lt;br&gt;维信：弗拉门戈</div>
   	  	
     	</section>
     
