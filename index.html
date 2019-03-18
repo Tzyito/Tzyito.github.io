@@ -309,8 +309,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-03-17T01:17:55+08:00">
-                2019-03-17
+              <time title="Post modified" itemprop="dateModified" datetime="2019-03-18T09:08:07+08:00">
+                2019-03-18
               </time>
             
           </span>
@@ -377,17 +377,26 @@
 
       
         
-          <p><img src="E:\Myblog\hexo\source\img\头像.jpg" alt></p>
+          <p><img src="https://i.loli.net/2019/03/18/5c8ee31b92bf3.jpg" alt></p>
 <font color="gray    "><br>最近心血来潮想自己搭建一个博客，来放平时的笔记和心得。于是在上网看了多种博客搭建的技术，决定选用hexo+GitHub(+购买阿里云域名)来搭建一个简洁、加载迅速的静态博客.这里提供一些相关软件的安装和自己在搭建的过程中遇到的问题，如果存在错误或者确定，欢迎给我留言！!<br></font>
 
-<h1 id="一、First-Step"><a href="#一、First-Step" class="headerlink" title="一、First Step"></a>一、First Step</h1><hr>
-<p>首先你需要安装Git、node.js、hexo.</p>
-<h2 id="1-Git的安装"><a href="#1-Git的安装" class="headerlink" title="1. Git的安装"></a>1. Git的安装</h2><p>首先你需要安装<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></p>
+<h1 id="First-Step"><a href="#First-Step" class="headerlink" title="First Step"></a>First Step</h1><hr>
+<p><span id="jump">首先你需要安装Git、node.js、hexo.</span></p>
+<h3 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h3><p>首先你需要安装<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></p>
 <blockquote>
 <p>注：这里需要用到Git，所以需要读者了解一些Git常用命令，比如如何推送分支、clone分支、拉去分支……(当然后期会出一些Git的实用教程、这里就不详细讲解Git)</p>
 </blockquote>
-<h2 id="2-node-js"><a href="#2-node-js" class="headerlink" title="2. node.js"></a>2. node.js</h2><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a>下载地址，然后一顿操作后打开<code>cmd</code>输入<code>node -v</code>显示版本号说明安装成功，<code>npm</code>是node.js自带的包管理工具,输入<code>npm -v</code>显示版本号说明安装成功，我们后面就可用npm来安装博客需要的软件</p>
-<h1 id="二、Second-Step"><a href="#二、Second-Step" class="headerlink" title="二、Second Step"></a>二、Second Step</h1><p>创建好上一步后，你可以更换主题，如何更换呢？</p>
+<h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a> 下载地址，然后一顿操作后打开<code>cmd</code>输入<code>node -v</code>显示版本号说明安装成功，<code>npm</code>是node.js自带的包管理工具,输入<code>npm -v</code>显示版本号说明安装成功，我们后面就可用<code>npm</code>来安装博客需要的软件</p>
+<h1 id="Second-Step"><a href="#Second-Step" class="headerlink" title="Second Step"></a>Second Step</h1><p><span id="jump">首先<code>cd</code>到自己的项目目，右键Git bash here然后在命令行输入下列命令，安装hexo</span></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>安装 Hexo 后，请执行下列命令，hexo 将会在指定文件夹里新建所需要的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ heox init Myblog</span><br><span class="line">$ <span class="built_in">cd</span> Myblog</span><br><span class="line">$ npm install hexo</span><br></pre></td></tr></table></figure>
+<p>新建完成后，指定文件的目录如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>网站的 配置 信息，你可以在此配置大部分的参数</p>
+<blockquote>
+<p>源文件的初始项目是默认设置，修改_config.yml可以修改你博客的布局，文章属性，作者信息等。关于该文件的说明，我放到了后面。如果你已经是老司机了，请<a href="#jump">点击跳转</a>点击这里跳转到配置文件信息</p>
+</blockquote>
 <h2 id="下面是测试字数"><a href="#下面是测试字数" class="headerlink" title="下面是测试字数"></a>下面是测试字数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;可以手动分割</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this is code</span><br></pre></td></tr></table></figure>
           <!--noindex-->
