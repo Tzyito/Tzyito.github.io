@@ -262,6 +262,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tzyito.xyz/2019/03/23/vue学习（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tzyito">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/索隆.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tzyito‘s Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/23/vue学习（一）/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-23T14:11:40+08:00">
+                2019-03-23
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-03-23T15:31:06+08:00">
+                2019-03-23
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近由于在学习<code>vue</code>的过程中，遇到过很多问题（例如：项目的搭建，运行整个项目，debug，配置文件等）所以想着为虾米不把遇到的问题记下来，然后以后遇到同样的问题也可以参考一下 \^/hhh!!</p>
+<h1 id="何谓Vue？"><a href="#何谓Vue？" class="headerlink" title="何谓Vue？"></a>何谓<code>Vue</code>？</h1><h2 id="vue是一个前端开发的框架"><a href="#vue是一个前端开发的框架" class="headerlink" title="vue是一个前端开发的框架"></a><code>vue</code>是一个前端开发的框架</h2><p>​    <code>vue</code>是由前谷歌员工尤雨溪及其团队开发的一个js框架，同样类似的框架还有react，Angular. （跳过介绍其他框架的环节）</p>
+<pre><code>`vue`现在有良好的中文文档 [点击这里](https://cn.vuejs.org/v2/guide/)，你可以通过文档了解到更加详细的有关于vue的知识。
+</code></pre><h1 id="如何使用Vue？"><a href="#如何使用Vue？" class="headerlink" title="如何使用Vue？"></a>如何使用<code>Vue</code>？</h1><h2 id="安装Vue"><a href="#安装Vue" class="headerlink" title="安装Vue"></a>安装<code>Vue</code></h2><h3 id="直接用-lt-script-gt-引入"><a href="#直接用-lt-script-gt-引入" class="headerlink" title="直接用&lt;script&gt;引入"></a>直接用<code>&lt;script&gt;</code>引入</h3><p>直接下载并用<code>&lt;script&gt;</code>标签引入，<code>Vue</code>会被注册为一个全局变量</p>
+<p>对于简单的学习，可以这样使用最新版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><p>在用<code>Vue</code>构建大型应用时使用<code>npm</code>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install vue</span><br></pre></td></tr></table></figure>
+<h3 id="命令行行工具（CLI）"><a href="#命令行行工具（CLI）" class="headerlink" title="命令行行工具（CLI）"></a>命令行行工具（CLI）</h3><p><code>Vue</code>提供了一个<strong>官方的CLI</strong>，为单页面应用(SPA)快速搭建繁琐的脚手架。(相信我，没有学习webpack前的项目搭建是十分的痛苦的！！┭┮﹏┭┮)  <strong>Vue cli之后会是我们经常使用脚手架工具</strong>。<a href="https://cli.vuejs.org/zh/guide/" target="_blank" rel="noopener">更多详情请查阅Vue-cli官方文档</a></p>
+<blockquote>
+<p>CLI 工具假定用户对 Node.js 和相关构建工具有一定程度的了解。如果你是新手，我们强烈建议先在不用构建工具的情况下通读<a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener">指南</a>，在熟悉 Vue 本身之后再使用 CLI。</p>
+</blockquote>
+<h1 id="使用Vue写一个hello-World"><a href="#使用Vue写一个hello-World" class="headerlink" title="使用Vue写一个hello World"></a>使用Vue写一个hello World</h1><h2 id="vue-cli创建一个项目"><a href="#vue-cli创建一个项目" class="headerlink" title="vue-cli创建一个项目"></a>vue-cli创建一个项目</h2><h3 id="vue-cli安装"><a href="#vue-cli安装" class="headerlink" title="vue-cli安装"></a>vue-cli安装</h3><p>打开我们的编译器，这里我使用的是<code>Vscode</code>（也可以用其他的编译器）打开终端<code>cd</code>到自己放项目的文件目录下，运行<code>npm install -g @vue/cli</code>安装vue-cli包</p>
+<h3 id="vue-create"><a href="#vue-create" class="headerlink" title="vue create"></a>vue create</h3><p>运行以下命令来创建一个新的项目</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create hello-world</span><br></pre></td></tr></table></figure>
+<p>之后会出现这样一个界面，只需要一路回车就OK了，具体是干什么先不用在意。</p>
+<p><img src="https://i.loli.net/2019/03/23/5c95d80e749f7.png" alt></p>
+<p>完成后执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> hello-world</span><br><span class="line">$ npm run serve</span><br></pre></td></tr></table></figure>
+<p>然后本地打开后，我们就得到了由<code>Vue-cli</code>创建的初始化项目</p>
+<p><img src="https://i.loli.net/2019/03/23/5c95da2a267d2.png" alt></p>
+<h3 id="实现hello-world"><a href="#实现hello-world" class="headerlink" title="实现hello world"></a>实现hello world</h3><p>打开刚刚创建的Vue项目，点开src文件下的App.vue文件</p>
+<p><img src="https://i.loli.net/2019/03/23/5c95dcb82db77.png" alt></p>
+<p>把原有的代码都删掉并添加如上代码，保存后查看网页此时就出现了Hello-World在网页的中间。</p>
+<p>这里大概解释一下项目文件及其里面的代码</p>
+<h4 id="项目的入口"><a href="#项目的入口" class="headerlink" title="项目的入口"></a>项目的入口</h4><p>整个项目的入口文件是<strong>main.js</strong>，然后所有.vue文件最后都是通过这个文件挂载到网页上进行渲染，而App.vue文件相当于我们写的Html的body区域。由于Vue使用的是<strong>组件化思想</strong>，所以每个部分都被划分成了一个小的组件，然后再通过导出组件并在App.vue里注册并使用。具体如何体现，我将在以后的学习中说明</p>
+<h4 id="其他文件说明"><a href="#其他文件说明" class="headerlink" title="其他文件说明"></a>其他文件说明</h4><p>关于其他文件的说明，例如</p>
+<blockquote>
+<p>public文件夹：</p>
+<p>​    放的是项目的公共文件（如：<code>index.html</code>，图标)</p>
+<p>src文件夹：<br>    assets放的是项目的style,imgage等文件<br>    compononts放的是各个组件.vue文件<br>剩下的都是配置文件，可根据自己的需要进行安装其他的包</p>
+</blockquote>
+<p>Vue和react都有很相似的东西，但都有自己独特的部分，下一部的学习我将用Vue写一个简单的todo-list项目。掰掰 ~\^/</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://tzyito.xyz/2019/03/04/hexo的安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -309,7 +473,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-03-18T09:08:07+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-03-18T09:15:17+08:00">
                 2019-03-18
               </time>
             
@@ -377,26 +541,17 @@
 
       
         
-          <p><img src="https://i.loli.net/2019/03/18/5c8ee31b92bf3.jpg" alt></p>
+          <p><img src="E:\Myblog\hexo\source\img\头像.jpg" alt></p>
 <font color="gray    "><br>最近心血来潮想自己搭建一个博客，来放平时的笔记和心得。于是在上网看了多种博客搭建的技术，决定选用hexo+GitHub(+购买阿里云域名)来搭建一个简洁、加载迅速的静态博客.这里提供一些相关软件的安装和自己在搭建的过程中遇到的问题，如果存在错误或者确定，欢迎给我留言！!<br></font>
 
-<h1 id="First-Step"><a href="#First-Step" class="headerlink" title="First Step"></a>First Step</h1><hr>
-<p><span id="jump">首先你需要安装Git、node.js、hexo.</span></p>
-<h3 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h3><p>首先你需要安装<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></p>
+<h1 id="一、First-Step"><a href="#一、First-Step" class="headerlink" title="一、First Step"></a>一、First Step</h1><hr>
+<p>首先你需要安装Git、node.js、hexo.</p>
+<h2 id="1-Git的安装"><a href="#1-Git的安装" class="headerlink" title="1. Git的安装"></a>1. Git的安装</h2><p>首先你需要安装<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></p>
 <blockquote>
 <p>注：这里需要用到Git，所以需要读者了解一些Git常用命令，比如如何推送分支、clone分支、拉去分支……(当然后期会出一些Git的实用教程、这里就不详细讲解Git)</p>
 </blockquote>
-<h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a> 下载地址，然后一顿操作后打开<code>cmd</code>输入<code>node -v</code>显示版本号说明安装成功，<code>npm</code>是node.js自带的包管理工具,输入<code>npm -v</code>显示版本号说明安装成功，我们后面就可用<code>npm</code>来安装博客需要的软件</p>
-<h1 id="Second-Step"><a href="#Second-Step" class="headerlink" title="Second Step"></a>Second Step</h1><p><span id="jump">首先<code>cd</code>到自己的项目目，右键Git bash here然后在命令行输入下列命令，安装hexo</span></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<p>安装 Hexo 后，请执行下列命令，hexo 将会在指定文件夹里新建所需要的文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ heox init Myblog</span><br><span class="line">$ <span class="built_in">cd</span> Myblog</span><br><span class="line">$ npm install hexo</span><br></pre></td></tr></table></figure>
-<p>新建完成后，指定文件的目录如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-<h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>网站的 配置 信息，你可以在此配置大部分的参数</p>
-<blockquote>
-<p>源文件的初始项目是默认设置，修改_config.yml可以修改你博客的布局，文章属性，作者信息等。关于该文件的说明，我放到了后面。如果你已经是老司机了，请<a href="#jump">点击跳转</a>点击这里跳转到配置文件信息</p>
-</blockquote>
+<h2 id="2-node-js"><a href="#2-node-js" class="headerlink" title="2. node.js"></a>2. node.js</h2><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a>下载地址，然后一顿操作后打开<code>cmd</code>输入<code>node -v</code>显示版本号说明安装成功，<code>npm</code>是node.js自带的包管理工具,输入<code>npm -v</code>显示版本号说明安装成功，我们后面就可用npm来安装博客需要的软件</p>
+<h1 id="二、Second-Step"><a href="#二、Second-Step" class="headerlink" title="二、Second Step"></a>二、Second Step</h1><p>创建好上一步后，你可以更换主题，如何更换呢？</p>
 <h2 id="下面是测试字数"><a href="#下面是测试字数" class="headerlink" title="下面是测试字数"></a>下面是测试字数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;可以手动分割</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this is code</span><br></pre></td></tr></table></figure>
           <!--noindex-->
@@ -649,7 +804,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
