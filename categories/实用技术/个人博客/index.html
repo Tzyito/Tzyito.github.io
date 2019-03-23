@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="一名蒟蒻程序猿，喜欢音乐，code，DC~~">
+<meta name="description" content="一名在读蒟蒻程序猿，喜欢音乐、coding、看各种美剧QQ：568063539">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tzyito‘s Blog">
 <meta property="og:url" content="http://tzyito.xyz/categories/实用技术/个人博客/index.html">
 <meta property="og:site_name" content="Tzyito‘s Blog">
-<meta property="og:description" content="一名蒟蒻程序猿，喜欢音乐，code，DC~~">
+<meta property="og:description" content="一名在读蒟蒻程序猿，喜欢音乐、coding、看各种美剧QQ：568063539">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tzyito‘s Blog">
-<meta name="twitter:description" content="一名蒟蒻程序猿，喜欢音乐，code，DC~~">
+<meta name="twitter:description" content="一名在读蒟蒻程序猿，喜欢音乐、coding、看各种美剧QQ：568063539">
 
 
 
@@ -268,7 +268,7 @@
         
             <a class="post-title-link" href="/2019/03/04/hexo的安装/" itemprop="url">
               
-                <span itemprop="name">利用hexo和Github搭建一个简单的博客</span>
+                <span itemprop="name">利用hexo和Github搭建一个简单的博客（一）</span>
               
             </a>
         
@@ -329,7 +329,7 @@
               <img class="site-author-image" itemprop="image" src="/uploads/索隆.jpg" alt="Tzyito">
             
               <p class="site-author-name" itemprop="name">Tzyito</p>
-              <p class="site-description motion-element" itemprop="description">一名蒟蒻程序猿，喜欢音乐，code，DC~~</p>
+              <p class="site-description motion-element" itemprop="description">一名在读蒟蒻程序猿，喜欢音乐、coding、看各种美剧<br>QQ：568063539</p>
           </div>
 		  
           <nav class="site-state motion-element">
@@ -593,6 +593,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'sURxMVY0XlbrezSX0JuIBP7M-gzGzoHsz# your leancloud application appid',
+        appKey: 'mKJJBgWQ07CkQy1WGNXxdt2K# your leancloud application appkey',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
